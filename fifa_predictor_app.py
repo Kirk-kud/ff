@@ -12,7 +12,7 @@ u = 'https://drive.google.com/file/d/1ugPa26CQtAlO7BiEGk_kejkS-n7hRYBm/view?usp=
 filename = 'model.joblib'
 gdown.cached_download(url, filename)
 
-model = joblib.load('model.joblib')
+model = joblib.load(filename)
 scaler = joblib.load('scaler.joblib')  # assuming the scaler was saved separately
 
 fe = ['potential', 'value_eur', 'wage_eur', 'age', 'international_reputation', 'shooting', 'passing',
