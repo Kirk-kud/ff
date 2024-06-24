@@ -6,14 +6,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import urllib.request
+import gdown
 
 # Load the model and scaler
 
 url = 'https://drive.google.com/uc?export=download&id=1ugPa26CQtAlO7BiEGk_kejkS-n7hRYBm'
 
 filename = 'model.joblib'
-urllib.request.urlretrieve(url, filename)
+gdown.download(url, filename)
 
 model = joblib.load('model.joblib')
 scaler = joblib.load('scaler.joblib')  # assuming the scaler was saved separately
