@@ -1,7 +1,4 @@
 
-### Complete Streamlit App Example
-
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -11,9 +8,9 @@ import gdown
 # Load the model and scaler
 
 url = 'https://drive.google.com/uc?export=download&id=1ugPa26CQtAlO7BiEGk_kejkS-n7hRYBm'
-
+u = 'https://drive.google.com/file/d/1ugPa26CQtAlO7BiEGk_kejkS-n7hRYBm/view?usp=drive_link'
 filename = 'model.joblib'
-gdown.download(url, filename)
+gdown.download(u, filename)
 
 model = joblib.load('model.joblib')
 scaler = joblib.load('scaler.joblib')  # assuming the scaler was saved separately
